@@ -1,74 +1,112 @@
-{
+/* Reset */
+* {
   box-sizing: border-box;
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
+/* Cabeçalho */
 .cabecalho {
-  background-color: #7e3e1c; 
-  padding: 15px 25px; 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-} 
-
-.cartao {
-width: 260px;
-height: 200px;
+  background-color: #7e3e1c;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.cartao-imagem {
-width: 100
+.cabecalho-link {
+  color: #fff;
+  text-decoration: none;
 }
 
-body { 
-  display: flex; 
-  flex-direction: column; 
-  min-height: 100vh; 
-  background-color: #f5f2f2; 
-} 
+h1 {
+  color: #fff;
+  font-size: 24px;
+}
 
-main { 
-  flex: 1; 
+/* Corpo da página */
+body {
   display: flex;
   flex-direction: column;
-} 
+  min-height: 100vh;
+  background-color: #f5f2f2;
+}
 
-.cabecalho-link { 
-  color: #fff; 
-  text-decoration: none; 
-} 
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
 
-h1 { 
-  color: #fff; 
-  font-size: 24px; 
-} 
+h2 {
+  margin-bottom: 20px;
+}
 
-footer { 
-  background-color: #7e3e1c; 
-  padding: 15px 25px; 
-  color: #fff; 
-} 
+/* Área dos cartões */
+section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-.cartao-interno { 
-  position: relative; 
-  transition: transform 0.8s; 
+/* Cartão */
+.cartao {
+  width: 260px;
+  height: 320px;
+  perspective: 1000px;
+}
+
+.cartao-interno {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
-} 
+}
 
-.cartao-frente, 
-.cartao-verso { 
-  position: absolute; 
-  border-radius: 12px; 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+.cartao:hover .cartao-interno {
+  transform: rotateY(180deg);
+}
+
+/* Frente e verso */
+.cartao-frente,
+.cartao-verso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   backface-visibility: hidden;
-} 
 
-.cartao-verso { 
-  transform: rotateY(180deg); 
-} 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+}
 
-section { 
-  display: flex; 
-  gap: 16px; 
-} 
+.cartao-verso {
+  transform: rotateY(180deg);
+}
+
+/* Imagem */
+.cartao-imagem {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #7e3e1c;
+  padding: 15px 25px;
+  color: #fff;
+  text-align: center;
+}
