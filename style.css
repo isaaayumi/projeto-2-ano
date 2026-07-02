@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-/* Cabeçalho */
+/* Cabecalho */
 .cabecalho {
   background-color: #7e3e1c;
   padding: 15px 25px;
@@ -24,7 +24,7 @@ h1 {
   font-size: 24px;
 }
 
-/* Corpo da página */
+/* Corpo da pagina */
 body {
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Área dos cartões */
+/* area dos cartoes */
 section {
   display: flex;
   gap: 20px;
@@ -103,7 +103,7 @@ section {
   margin-bottom: 10px;
 }
 
-/* Rodapé */
+/* Rodape */
 footer {
   background-color: #7e3e1c;
   padding: 15px 25px;
